@@ -1,0 +1,47 @@
+name: Feature request
+description: Suggest a focused improvement
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        TenSeiAi is local-first and does not use pretrained models. Please explain
+        the user problem, not only the proposed implementation.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is difficult or missing today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the behavior you want and any alternatives you considered.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Retrieval and answers
+        - Model and training
+        - Build and release
+        - Web UI
+        - Android / Termux
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Project constraints
+      options:
+        - label: This can run locally without a required hosted API.
+          required: true
+        - label: This does not require a Llama/GGUF/pretrained model.
+          required: true

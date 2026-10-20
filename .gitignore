@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local build and runtime output
+dist/
+build/
+*.pyz
+*.tsei
+source/tensei/cspeed.so
+source/tensei/*.dll
+source/tensei/*.dylib
+source/tensei/*.pyd
+source/tensei/__pycache__/
+source/data/*.db
+source/data/*.db-*
+source/data/*.bak*
+source/data/hf/
+source/bench/*_results.json
+source/bench/*.jsonl
+*.log
+
+# Keep the release asset and its documentation
+!assets/tensei.db.gz
+!assets/SHA256SUMS
+!assets/README.md
+!source/data/README.md
+
+# Android signing material
+*.jks
+*.keystore
+*.p12
+*.pfx
+android/local.properties
+android/.gradle/
+android/app/build/
+source/android/build/
+source/android/dist/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

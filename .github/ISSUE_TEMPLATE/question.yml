@@ -1,0 +1,31 @@
+name: Question
+description: Ask a usage or build question
+title: "[question] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the README, docs/FAQ.md, and existing issues first. Do not post
+        security vulnerabilities here.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Version, OS, Python/numpy versions, and the command you ran.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and documentation.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true

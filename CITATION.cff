@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use TenSeiAi, please cite this repository."
+title: "TenSeiAi: a local AI engine built from scratch"
+version: "8.1.0"
+date-released: "2026-10-20"
+license: MIT
+repository-code: "https://github.com/Koustubh12345/TenSeiAi"
+keywords:
+  - local-ai
+  - from-scratch
+  - transformer
+  - mixture-of-experts
+  - retrieval
+  - sqlite
+  - python
+authors:
+  - name: "Koustubh Gaikwad"
+    alias: "Koustubh12345"
+abstract: >-
+  TenSeiAi is a self-contained local AI stack combining a small
+  Transformer/Mixture-of-Experts language core, hybrid retrieval over a SQLite
+  knowledge base, deterministic solvers, a local web chat, and an
+  OpenAI-compatible API. The project does not use Llama, GGUF, or pretrained
+  weights.

@@ -1,0 +1,18 @@
+[package]
+name = "tensei-rust"
+version = "0.1.0"
+edition = "2021"
+authors = ["TenSeiAi Core Team"]
+description = "High-performance native acceleration core for TenSeiAi in Rust"
+
+[lib]
+name = "tensei_rust"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
