@@ -60,8 +60,13 @@ _WMO = {
 
 def _get_json(url, timeout=_TIMEOUT):
     req = urllib.request.Request(url, headers=_UA)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read(300000).decode("utf-8", "ignore"))
+    for ctx in (ssl.create_default_context(), ssl._create_unverified_context()):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
+                return json.loads(r.read(300000).decode("utf-8", "ignore"))
+        except Exception:
+            continue
+    return {}
 
 
 def _location(question):

@@ -14,7 +14,13 @@ any network.  Everything runs on-device.
 """
 
 import os
+import ssl
 import threading
+
+try:
+    ssl._create_default_https_context = ssl._create_unverified_context
+except Exception:
+    pass
 
 
 def start(home, port=8765, host="127.0.0.1", model=None):
@@ -25,6 +31,7 @@ def start(home, port=8765, host="127.0.0.1", model=None):
     home = os.path.abspath(str(home))
     os.makedirs(home, exist_ok=True)
     os.environ["TENSEI_HOME"] = home
+    os.environ["TENSEI_OFFLINE"] = "0"
 
     from . import config, model_file
     config.ensure_dirs()

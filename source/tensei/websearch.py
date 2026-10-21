@@ -48,11 +48,11 @@ def http_get(url, timeout=None, max_bytes=600000):
                     except Exception:
                         pass
                 return raw, r
-        except ssl.SSLError:
+        except (ssl.SSLError, urllib.error.URLError, TimeoutError, OSError):
             continue
         except Exception:
-            raise
-    raise RuntimeError("ssl failure")
+            continue
+    raise RuntimeError("network failure")
 
 
 class _Extractor(HTMLParser):
