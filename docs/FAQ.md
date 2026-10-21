@@ -15,7 +15,7 @@ helper is optional.
 ## Do I need to install anything?
 
 You need Python 3.12+ and numpy. The release `.pyz` does not bundle CPython or
-numpy. On Termux, `pkg install python numpy` is enough.
+numpy. On Termux, `pkg install -y python python-numpy` is enough.
 
 ## What is the difference between `TenSeiAi.pyz` and `TenSeiAi.tsei`?
 

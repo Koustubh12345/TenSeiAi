@@ -8,8 +8,8 @@ Chaquopy app. The model is local in both cases.
 Termux is the fastest way to run the complete engine on a phone.
 
 ```bash
-pkg update
-pkg install -y python numpy curl
+pkg update -y
+pkg install -y python python-numpy curl
 REPO="Koustubh12345/TenSeiAi"
 mkdir -p ~/TenSeiAi && cd ~/TenSeiAi
 curl -fL -o TenSeiAi.pyz "https://github.com/$REPO/releases/latest/download/TenSeiAi.pyz"

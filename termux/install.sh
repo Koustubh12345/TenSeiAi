@@ -10,7 +10,7 @@ TSEI="${2:-}"
 
 echo "[1/4] installing python + numpy ..."
 pkg update -y >/dev/null 2>&1 || true
-pkg install -y python numpy >/dev/null
+pkg install -y python python-numpy >/dev/null
 
 DEST="$HOME/tensei"
 mkdir -p "$DEST"

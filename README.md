@@ -64,8 +64,8 @@ For an instant native experience without Termux or Python installation:
 Open Termux and run:
 
 ```bash
-pkg update
-pkg install -y python numpy curl
+pkg update -y
+pkg install -y python python-numpy curl
 mkdir -p ~/TenSeiAi && cd ~/TenSeiAi
 curl -fL -o TenSeiAi.pyz "https://github.com/Koustubh12345/TenSeiAi/releases/latest/download/TenSeiAi.pyz"
 

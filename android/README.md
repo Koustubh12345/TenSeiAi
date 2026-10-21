@@ -21,6 +21,6 @@ included in Git; download it from a release or build it from source.
 The Termux path is simpler if you do not need a native app:
 
 ```bash
-pkg install python numpy
+pkg install -y python python-numpy
 python TenSeiAi.pyz TenSeiAi.tsei
 ```

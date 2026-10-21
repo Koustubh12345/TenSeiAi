@@ -175,7 +175,7 @@ if [ -d "/data/data/com.termux" ] || [ -n "$TERMUX_VERSION" ]; then
     echo "[TenSeiAi] Termux environment detected."
     echo "[TenSeiAi] Installing python & numpy via pkg..."
     pkg update -y >/dev/null 2>&1 || true
-    pkg install -y python numpy || pkg install -y python
+    pkg install -y python python-numpy curl || pkg install -y python
     if [ ! -f "$PREFIX/bin/python" ] && [ -f "$PREFIX/bin/python3" ]; then
         ln -sf "$PREFIX/bin/python3" "$PREFIX/bin/python"
     fi
